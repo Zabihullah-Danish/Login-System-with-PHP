@@ -1,7 +1,8 @@
 <?php
-
+    session_start();
+    require '../../App/config/baseUrl.php';
    isset($_POST['login-btn']) ? require '../../App/Constrollers/LoginController.php' : "";
-   echo isset($_GET['error']) ? "Hi" : "";
+   isset($_SESSION['name']) ? header('location:'.baseUrl()) : '';
 ?>
 <!DOCTYPE html>
 <html lang="en">

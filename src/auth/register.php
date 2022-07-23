@@ -1,3 +1,9 @@
+<?php 
+    session_start();
+    require '../../App/config/baseUrl.php';
+    isset($_SESSION['name']) ? header('location:'.baseUrl()) : '';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

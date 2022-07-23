@@ -10,9 +10,13 @@ if(isset($_POST['login-btn'])){
     $sql = "SELECT * FROM users WHERE email = '$email' AND password = '$password'";
     $query = mysqli_query($conn,$sql);
     $result = mysqli_fetch_assoc($query);
+    // echo "<pre>";
+    // print_r($result);
+    // echo "</pre>";
+    // exit();
     if($result){
-        $_SESSION['name'];
-        $_SESSION['email'];
+        $_SESSION['name'] = $result['name'];
+        $_SESSION['email'] = $email;
         $path = baseUrl();
         header('location:'.$path);
     }else{
