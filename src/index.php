@@ -22,8 +22,8 @@
         <div class="">
             <div class="flex flex-row justify-between bg-gray-900 text-gray-300 p-3">
                 <ul class="flex flex-row space-x-3">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Posts</a></li>
+                    <li class=""><a href="">Home</a></li>
+                    <li class=""><a href="">Posts</a></li>
                     <li><a href="">About</a></li>
                 </ul>
                 <ul class="flex flex-row space-x-4">
@@ -36,7 +36,7 @@
                     <?php 
                     $path = baseUrl('auth/logout.php');
                     ?>
-                    <li><a class="text-xs font-mono" href="<?php echo $path; ?>">Logout</a></li>
+                    <li><a class="text-xs font-mono text-red-500" href="<?php echo $path; ?>">Logout</a></li>
                 </ul>
             </div>
         </div>   
